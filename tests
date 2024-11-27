@@ -1,0 +1,137 @@
+
+----------------------------ERRORS---------------------------------
+
+!!         
+\          
+;;          
+
+echo A>/dev/full
+echo $?
+
+
+'q"
+'q""
+"'q""
+
+
+cat | cat | ls       
+
+<< EOF  | grep line
+Ctrl-C
+echo $?
+
+<< EOF  | grep line | ls
+Ctrl-C
+echo $?
+
+
+cat  | grep line | ls
+Ctrl-C
+echo $?
+
+  
+mkdir testa
+cd testa
+mkdir testb
+cd testb
+rm -rf ../../testa/
+pwd
+cd ..
+export PWD="/home/test1"
+env
+
+
+env -i ./minishell            
+ls
+echo
+cd ./src/
+echo $PWD
+pwd
+
+
+env -i ./minishell
+export PATH="/bin"
+env
+ls                            
+export PATH="/bin:/bin"
+ls
+
+
+cat
+Ctrl-D
+echo $?
+
+<< EOF | grep line | ls 
+
+
+./minishell  
+$> unset PATH
+$> ls
+
+export test="        test                          "
+export test="test1 test2"
+export test=test1 test2
+export test= test1 test2
+export ZZZZ=zzz XXXX=xxxx
+echo ' '$HOME'' " " | cat -e | wc
+echo ' '$HOME'' " " | cat -e
+echo ' '$HOME' ' " " | cat -e
+echo ' '$HOME' ' | cat -e
+echo ' '$HOME' '
+echo ' '$HOME ' "'
+echo '" ' $HOME ' "'
+echo '" '$HOME' "'
+echo '"'$HOME'"'
+echo '"$HOME"'
+echo "$HOME"
+"echo $HOME"
+"echo $HOME"
+"'"
+< <q
+< <
+
+unset HOME
+cd
+export HOME=/home/username
+cd
+export HOME=/non/existent/path
+cd
+
+
+export a=a
+export a=$a$a
+x 25 fois
+env | grep a=a | wc
+unset a
+
+cat
+touche Enter
+touche Enter
+touche Enter
+Ctrl-C
+
+exit qq
+echo $?
+
+cat  | grep line
+Ctrl-C
+echo $?
+
+assd  | grep line
+echo $?
+
+assd  | grep line | ls
+echo $?
+
+
+cat | cat
+^\Quit (core dumped)
+echo $?
+131
+
+echo A>> /dev/full
+
+cat /dev/stdin
+
+a.txt <
+< a.txt
